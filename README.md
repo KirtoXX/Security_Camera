@@ -7,10 +7,10 @@ wifi安防摄像头</p>
 #-----------------  
 
 一.版本控制</p>
-  1.Anaconda3 4.2   
-  2.opencv3  
-  3.imutils  
-  4.requests  
+  1.Anaconda3 4.2</p>
+  2.opencv3  </p>
+  3.imutils  </p>
+  4.requests  </p>
 </p>
 二.兼容系统</p>
 </p>
