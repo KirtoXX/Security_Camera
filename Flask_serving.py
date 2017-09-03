@@ -32,6 +32,7 @@ def process_func():
             image_path = persion_dir+name+'.jpg'
             shutil.copy(temp_path,image_path)
 
+
 def get_list(time):
     all_image_list = os.listdir('Persion_image')
     result = []
