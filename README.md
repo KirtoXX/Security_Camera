@@ -23,7 +23,7 @@ wifi安防摄像头</p>
 url = http://your_ip:port/download/time  
 json 数据格式:  
 {  
-  nb_image:  
+  nb_image:n  
   1:image1  
   2:image2  
   ...  
