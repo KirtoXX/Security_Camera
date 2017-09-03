@@ -1,15 +1,25 @@
 import numpy as np
 from scipy import misc
-from svm_model import Detection_api
+from SVM_model import Detection_api
 import time
+import os
+import re
+
+def get_list(time):
+    all_image_list = os.listdir('Persion_image')
+    result = []
+    for path in all_image_list:
+        try:
+            _,n = re.search(time,path).span()
+            if n == 15:
+                result.append(path)
+        except:
+            None
+    return result
 
 def main():
-    img_path = 'test_image/001.jpg'
-    model = Detection_api()
-    n = model.detectFaces(img_path)
-    print(n)
-    a = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-    print(a)
+    l1 = get_list('2017-09-03-1125')
+    print(l1)
 
 if __name__ == '__main__':
     main()

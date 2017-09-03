@@ -1,4 +1,4 @@
-from linux_program.Cut import Camera
+from linux_program.Camera import Camera
 from linux_program.Sent import Connect
 import time
 
