@@ -19,12 +19,12 @@ wifi安防摄像头</p>
   
   
 #-------------更新用--------------</p>
-加入了转发接口  
-url = http://your_ip:port/download/time  
-json 数据格式:  
-{  
-  nb_image:n  
-  1:image1  
-  2:image2  
-  ...  
-}  
+tips1:加入了转发接口  
+  url = http://your_ip:port/download/time time格式'%Y-%m-%d-%H%M%  
+  json 数据格式:  
+  {  
+    nb_image:n  
+    1:image1  
+    2:image2  
+    ...  
+  }  
