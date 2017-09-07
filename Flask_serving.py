@@ -1,5 +1,5 @@
 from flask import Flask,request,json
-from flask import send_file,send_from_directory
+from flask import send_file,send_from_directory,make_response,Response,abort
 from SVM_model import Detection_api
 import warnings
 import time
@@ -67,6 +67,16 @@ def sent_image(time):
             result = json.dumps(all_info)
 
         return result
+
+
+@app.route('/image/<filename>', methods=['POST','GET'])
+def download(filename):
+    if request.method=="GET":
+        print(filename)
+        if os.path.isfile(os.path.join(persion_dir, filename)):
+            return send_from_directory(persion_dir,filename,as_attachment=True)
+        else:
+            abort(404)
 
 #--------main--------------
 def main():
