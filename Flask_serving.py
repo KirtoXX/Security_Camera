@@ -6,6 +6,7 @@ import time
 import shutil
 import os
 import re
+import winsound
 
 #-------init flask_serving--------
 app = Flask(__name__)
@@ -31,6 +32,7 @@ def process_func():
             name = time.strftime('%Y-%m-%d-%H%M%S',time.localtime(time.time()))
             image_path = persion_dir+name+'.jpg'
             shutil.copy(temp_path,image_path)
+            winsound.Beep(600,1000)
 
 
 def get_list(time):

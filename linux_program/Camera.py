@@ -9,6 +9,7 @@ class Camera:
     def cut_image(self):
         _,frame = self.cap.read()
         cv2.imwrite(self.save_path,frame)
+        print('cut finish')
         return self.save_path
 
 # def main():
