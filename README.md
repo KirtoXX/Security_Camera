@@ -1,30 +1,29 @@
 # Security_Camera
-wifi安防摄像头</p>
-#-----------------</p>
-网络安防摄像头，当系统开启后，有人在摄像头下活动时会被拍照并存储到服务器下</p>
-这应该是我大四最后一个课设实验了，大学完结撒花~~  </p>
-希望自己考研能考个好成绩!!!!!!</p>
-#-----------------  
 
-一.依赖</p>
-  1.Anaconda3 4.2</p>
-  2.opencv3  </p>
-  3.imutils  </p>
-  4.requests  </p>
+--something for me--</p>
+this project is my last project of my collage life</p>
+And I will take the graduate entrance examination of ustb,good luck for me</p>
+
+
+--dependence--</p>
+1.OpenCV3</p>
+2.Flask</p>
+3.imutils</p>
 </p>
-二.部署</p>
+
+--enviremetnt--</p>
+1.pc(support gpu)</p>
+2.Raspberry Pi</p>
+3.support svm(based on OpenCV3)</p>
 </p>
-  1.服务器部署好所有环境后，cd到目录下，python Flask_serving.py 即可</p>
-  2.ssh/xshell 链接到树莓派，配置 树莓派 加入无线网络，cd到linux_program目录下 python test.py即可</p>
-  
-  
-#-------------更新用--------------</p>
-tips1:加入了转发接口  
-  url = http://your_ip:port/download/time time格式'%Y-%m-%d-%H%M%  
-  json 数据格式:  
-  {  
-    nb_image:n  
-     1:image1  
-     2:image2  
-    ...  
-  }  
+
+--how to run--</p>
+1.copy linux program to Raspberry Pi,setting your serving ip and python test.py</p>
+2.setting your serving ip and python Flask_serving.py</p>
+</p>
+
+--update--</p>
+1.support deep learning detecion_model</p>
+(1)yolo_net</p>
+(2)ssd_mobilenet(implement by tensorflow/model/Detection_api)</p>
+
