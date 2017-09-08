@@ -7,6 +7,7 @@ import shutil
 import os
 import re
 import winsound
+from scipy import misc
 
 #-------init flask_serving--------
 app = Flask(__name__)
@@ -14,6 +15,7 @@ temp_path = "temp/temp.jpg"
 persion_dir = "Persion_image/"
 global model
 model = Detection_api()
+#model.buid_ssdmobilenet()
 
 #--------func deftion------------
 
@@ -25,13 +27,14 @@ def process_func():
         f = request.files['userfile']
         f.save(temp_path)
         #detection face
-        nb = model1.detectFaces(temp_path)
+        nb,image_np = model1.detectFaces(temp_path)
         print(nb)
         #copy image to our dir
         if nb!=0:
             name = time.strftime('%Y-%m-%d-%H%M%S',time.localtime(time.time()))
             image_path = persion_dir+name+'.jpg'
-            shutil.copy(temp_path,image_path)
+            #shutil.copy(temp_path,image_path)
+            misc.imsave(image_path,image_np)
             winsound.Beep(600,1000)
 
 
@@ -46,6 +49,7 @@ def get_list(time):
         except:
             None
     return result
+
 
 @app.route('/download/<time>', methods=['POST', 'GET'])
 def sent_image(time):

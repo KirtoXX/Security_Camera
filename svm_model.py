@@ -28,14 +28,13 @@ class Detection_api:
 
         rects = np.array([[x, y, x + w, y + h] for (x, y, w, h) in rects])
         pick = non_max_suppression(rects, probs=None, overlapThresh=0.65)
+        nb = len(pick)
 
         #-----------rectangle image-------------
         if nb!=0:
-            for (x, y, w, h) in rects:
-                cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-            cv2.imwrite(image_path,image)
-
-        nb = len(pick)
-
+            for (xA, yA, xB, yB) in pick:
+                cv2.rectangle(image, (xA, yA), (xB, yB), (0,0, 0), 2)
+        else:
+            None
         #------------finish---------------------
-        return nb
+        return nb,image

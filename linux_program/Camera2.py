@@ -5,5 +5,6 @@ class Camera:
         None
 
     def cut_image(self):
-        os.system('raspistill -t 100 -n -o temp/temp_image.jpg')
+        os.system('raspistill -t 500 -w 640 -h 480 -n -o temp/temp_image.jpg')
+        print('cut finish')
         return 'temp/temp_image.jpg'

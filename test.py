@@ -5,21 +5,12 @@ import time
 import os
 import re
 
-def get_list(time):
-    all_image_list = os.listdir('Persion_image')
-    result = []
-    for path in all_image_list:
-        try:
-            _,n = re.search(time,path).span()
-            if n == 15:
-                result.append(path)
-        except:
-            None
-    return result
 
 def main():
-    l1 = get_list('2017-09-03-1125')
-    print(l1)
+    model = Detection_api()
+    nb,image = model.detectFaces('test_image/004.jpg')
+    print(nb)
+    misc.imsave('temp/004.jpg',image)
 
 if __name__ == '__main__':
     main()
