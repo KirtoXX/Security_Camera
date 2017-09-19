@@ -2,7 +2,7 @@
 
 --something for me--</p>
 this project is my last project of my collage life</p>
-And I will take the graduate entrance examination of ustb,good luck for me</p>
+And I will take the graduate entrance examination,good luck for me</p>
 
 
 --dependence--</p>
